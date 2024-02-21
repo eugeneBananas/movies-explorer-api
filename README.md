@@ -10,6 +10,4 @@ The app provides a user-friendly interface for easy navigation and search functi
 
 IP <178.154.205.63>
 
-Frontend <https://mesto-eugenebananas.nomoredomainswork.ru>
-
-Backend <https://api.mesto-eugenebananas.nomoredomainswork.ru>
+Backend <https://api.movie-eugenebananas.nomoredomainswork.ru>
