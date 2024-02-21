@@ -1,0 +1,18 @@
+{
+  "extends": ["airbnb-base"],
+  "rules": {
+    "no-underscore-dangle": ["error", { "allow": ["_id"] }]
+  },
+  "parserOptions": {
+    "ecmaVersion": "latest"
+  },
+  "env": {
+    "es6": true,
+    "node": true,
+    "browser": true
+  },
+  "globals": {
+    "mongoose": "readonly",
+    "BadRequestError": "readonly"
+  }
+}
