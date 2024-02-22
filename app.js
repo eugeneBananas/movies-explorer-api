@@ -1,8 +1,5 @@
 require('dotenv').config();
 
-const HTTP_STATUS = {
-  INTERNAL_SERVER_ERROR: 500,
-};
 const express = require('express');
 const cors = require('cors');
 const helmet = require('helmet');
