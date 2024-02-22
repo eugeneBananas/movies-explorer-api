@@ -79,12 +79,13 @@ module.exports.login = (req, res, next) => {
       // req.headers.authorization = `Bearer +${token}`;
       // req.user._id = user._id;
       // console.log(req.user + ' 3');
-      res
-        .cookie('jwt', token, {
-          httpOnly: true,
-          sameSite: true,
-        })
-        .end();
+      res.send({ token });
+      // res
+      //   .cookie('jwt', token, {
+      //     httpOnly: true,
+      //     sameSite: true,
+      //   })
+      //   .end();
     })
     .catch((err) => {
       next(new AnthorizedError(err.message));

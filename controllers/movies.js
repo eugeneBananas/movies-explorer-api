@@ -67,7 +67,7 @@ module.exports.deleteMovie = (req, res, next) => {
     })
     .then((movie) => {
       if (!movie.owner.equals(req.user._id)) {
-        throw new ForbiddenError('Нельзя удалить кино другого пользователя');
+        throw new ForbiddenError('Нельзя удалить фильм другого пользователя');
       }
       Movie.deleteOne(movie).then(() => {
         res.send({ data: movie });

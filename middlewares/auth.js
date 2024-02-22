@@ -23,3 +23,37 @@ module.exports = (req, res, next) => {
 
   next(); // пропускаем запрос дальше
 };
+
+// const { JWT_SECRET = 'c9310ab8bf2ac4c3' } = process.env;
+// const jwt = require('jsonwebtoken');
+// const AnthorizedError = require('../errors/unathorized-error');
+
+// module.exports = (req, res, next) => {
+//   const { authorization } = req.headers;
+//   const token = req.cookies.jwt;
+
+//   if (!token || !authorization) {
+//     next(new AnthorizedError('Отсутствует токен авторизации'));
+//   }
+
+//   if (authorization.startsWith('Bearer ')) {
+//     // Если токен передается в заголовке Authorization
+//     const tokenHeader = authorization.replace('Bearer ', '');
+//     if (token !== tokenHeader) {
+//       next(new AnthorizedError('Неверный токен авторизации'));
+//     }
+//   } else {
+//     // Если токен хранится в куках
+//     let payload;
+
+//     try {
+//       payload = jwt.verify(token, JWT_SECRET);
+//     } catch (err) {
+//       next(new AnthorizedError('Неправильная почта или пароль'));
+//     }
+
+//     req.user = payload; // записываем пейлоуд в объект запроса
+//   }
+
+//   next(); // пропускаем запрос дальше
+// };
